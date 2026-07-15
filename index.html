@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wild Horses NYC — EventFinder SDK Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background:
+      radial-gradient(1200px 500px at 80% -10%, rgba(99,102,241,.14), transparent 60%),
+      radial-gradient(900px 400px at 0% 110%, rgba(139,92,246,.10), transparent 60%),
+      #0b0d12;
+    color: #eef0f6; -webkit-font-smoothing: antialiased;
+  }
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    padding: 60px 24px; gap: 18px;
+  }
+  .kicker {
+    font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+    color: #a5b4fc; background: rgba(99,102,241,.12); border: 1px solid rgba(99,102,241,.25);
+    padding: 7px 16px; border-radius: 20px;
+  }
+  h1 {
+    font-size: clamp(40px, 7vw, 76px); font-weight: 900; letter-spacing: -2px; line-height: 1.02;
+    background: linear-gradient(135deg, #fff 30%, #a5b4fc); -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero > p { font-size: 16px; color: #8b93a7; max-width: 480px; line-height: 1.6; }
+  .cta {
+    margin-top: 8px; display: inline-flex; align-items: center; gap: 9px;
+    font-size: 14px; font-weight: 700; color: #fff; cursor: pointer;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6); border: none; font-family: inherit;
+    padding: 14px 26px; border-radius: 14px; box-shadow: 0 6px 20px rgba(99,102,241,.4);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(99,102,241,.55); }
+  .cta svg { width: 17px; height: 17px; fill: currentColor; }
+  .embed {
+    margin-top: 34px; max-width: 680px; width: 100%; text-align: left;
+    background: #141822; border: 1px solid #262c3b; border-radius: 16px; overflow: hidden;
+  }
+  .embed .bar {
+    display: flex; align-items: center; gap: 8px; padding: 11px 16px;
+    background: #1a1f2c; border-bottom: 1px solid #262c3b;
+    font-size: 12px; font-weight: 600; color: #8b93a7;
+  }
+  .embed .bar .dots { display: flex; gap: 5px; }
+  .embed .bar .dots span { width: 10px; height: 10px; border-radius: 50%; }
+  .embed pre {
+    padding: 16px; font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 12px; line-height: 1.7; overflow-x: auto; color: #c9d1e3;
+  }
+  .embed .tag { color: #8b5cf6; } .embed .attr { color: #a5b4fc; } .embed .val { color: #4ade80; }
+  .foot { font-size: 12px; color: #4d5568; margin-top: 10px; }
+  .foot code { color: #8b93a7; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">EventFinder SDK · Demo</div>
+  <h1>Wild Horses</h1>
+  <p>This entire chat widget — launcher, popup, event search, WhatsApp share — is added to this page with a single script tag. Look bottom-right, or:</p>
+  <button class="cta" onclick="EventFinder.open()">
+    <svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
+    Open the widget
+  </button>
+
+  <div class="embed">
+    <div class="bar">
+      <div class="dots"><span style="background:#f0455a"></span><span style="background:#f5a623"></span><span style="background:#4ade80"></span></div>
+      That's all you embed:
+    </div>
+    <pre><span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="val">"eventfinder-widget.js"</span>
+        <span class="attr">data-apikey</span>=<span class="val">"YOUR_KEY"</span>
+        <span class="attr">data-orgid</span>=<span class="val">"45742"</span>
+        <span class="attr">data-venueid</span>=<span class="val">"740573"</span><span class="tag">&gt;&lt;/script&gt;</span></pre>
+  </div>
+  <p class="foot">Programmatic API: <code>EventFinder.open()</code> · <code>.close()</code> · <code>.toggle()</code> · <code>.search("events this week")</code> — see README.md for all options.</p>
+</div>
+
+<!-- ============ The one-line SDK embed ============ -->
+<script src="eventfinder-widget.js"
+        data-orgid="45742"
+        data-venueid="740573"
+        data-title="Event Finder"
+        data-greeting="Hi! 👋 I can help you find events at Wild Horses. Ask me things like:"></script>
+
+</body>
+</html>
