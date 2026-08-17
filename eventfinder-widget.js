@@ -17,7 +17,7 @@
 
   // ================= Config =================
   var DEFAULTS = {
-    apiKey: "__API_KEY_PLACEHOLDER__",
+    apiKey: "__API_KEY",
     //orgId: "",
     //venueId: "",           // set "" to search all venues for the org
     apiBase: "https://app.ticketmaster.com/discovery/v2/events.json",
