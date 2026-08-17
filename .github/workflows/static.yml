@@ -31,6 +31,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Inject API Key
+        env:
+          MY_API_KEY: ${{ secrets.API_KEY }} # Matches the name you made in GitHub Settings
+        run: |
+          echo "Injecting secret..."
+          # Your build commands go here (see options below)
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
