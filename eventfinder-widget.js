@@ -18,8 +18,8 @@
   // ================= Config =================
   var DEFAULTS = {
     apiKey: "__API_KEY",
-    //orgId: "",
-    //venueId: "",           // set "" to search all venues for the org
+    orgId: "",
+    venueId: "",           // set "" to search all venues for the org
     apiBase: "https://app.ticketmaster.com/discovery/v2/events.json",
     title: "Event Finder",
     subtitle: "",                // defaults to "Online · N upcoming events"
@@ -50,9 +50,9 @@
 
   function apiUrl() {
     var u = cfg.apiBase + "?apikey=" + encodeURIComponent(cfg.apiKey) +
-            "&orgid=" + encodeURIComponent(cfg.orgId) +
-            "&method=json&resultsPerPage=200";
+            "&method=json&resultsPerPage=20";
     if (cfg.venueId) u += "&venueid=" + encodeURIComponent(cfg.venueId);
+    if (cfg.orgId) u += "&orgid=" + encodeURIComponent(cfg.orgId);
     return u;
   }
 
