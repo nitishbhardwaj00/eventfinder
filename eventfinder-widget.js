@@ -17,10 +17,10 @@
 
   // ================= Config =================
   var DEFAULTS = {
-    apiKey: "xrZT1go6BccRHSpCPPC9cQdqQ8vZwC",
-    orgId: "45742",
-    venueId: "740573",           // set "" to search all venues for the org
-    apiBase: "https://api.ticketweb.com/",
+    apiKey: "TPPK67H2FoRbBAPz3EPMlOTEbGFMnSf0",
+    orgId: "",
+    venueId: "",           // set "" to search all venues for the org
+    apiBase: "https://app.ticketmaster.com/",
     title: "Event Finder",
     subtitle: "",                // defaults to "Online · N upcoming events"
     greeting: "Hi! 👋 I can help you find events. Ask me things like:",
