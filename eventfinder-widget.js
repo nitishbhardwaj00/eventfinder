@@ -4,7 +4,7 @@
  *
  * Quick start (one line):
  *   <script src="eventfinder-widget.js"
- *           data-apikey="YOUR_KEY" data-orgid="45742" data-venueid="740573"></script>
+ *           data-apikey="YOUR_KEY" data-orgid="YOUR_ORGID" data-venueid="YOUR_VENUEID"></script>
  *
  * Or manual init:
  *   <script src="eventfinder-widget.js" data-autoinit="false"></script>
@@ -18,8 +18,8 @@
   // ================= Config =================
   var DEFAULTS = {
     apiKey: "__API_KEY_PLACEHOLDER__",
-    orgId: "",
-    venueId: "",           // set "" to search all venues for the org
+    //orgId: "",
+    //venueId: "",           // set "" to search all venues for the org
     apiBase: "https://app.ticketmaster.com/discovery/v2/events.json",
     title: "Event Finder",
     subtitle: "",                // defaults to "Online · N upcoming events"
