@@ -20,7 +20,7 @@
     apiKey: "TPPK67H2FoRbBAPz3EPMlOTEbGFMnSf0",
     orgId: "",
     venueId: "",           // set "" to search all venues for the org
-    apiBase: "https://app.ticketmaster.com/",
+    apiBase: "https://app.ticketmaster.com/discovery/v2/events.json",
     title: "Event Finder",
     subtitle: "",                // defaults to "Online · N upcoming events"
     greeting: "Hi! 👋 I can help you find events. Ask me things like:",
